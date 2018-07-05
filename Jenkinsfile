@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	tools{
-		maven 'maven 3.0.5'
+		maven 'maven'
 		sonarqube 'SonarQube 6.4'
 		nexus 'Nexus 3.0.2-02'
 	}
