@@ -1,9 +1,9 @@
 pipeline {
     agent any
 	tools{
-		maven 'Apache Maven 3.0.5'
-		sonarqube 'sonarqube'
-		nexus 'nexus'
+		maven 'Maven 3.0.5'
+		sonarqube 'SonarQube 6.4'
+		nexus 'Nexus 3.0.2-02'
 	}
     stages {
         stage('Checkout') {
