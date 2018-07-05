@@ -2,8 +2,7 @@ pipeline {
     agent any
 	tools{
 		maven 'maven'
-		sonarqube 'SonarQube 6.4'
-		nexus 'Nexus 3.0.2-02'
+		
 	}
     stages {
         stage('Checkout') {
@@ -32,12 +31,11 @@ pipeline {
         stage('Sonar') {
             steps {
                 echo 'Sonar Scanner'
-               	def scannerHome = tool 'sonarqube'
-			    withSonarQubeEnv('sonarqube') {
+               	
 			    	sh 'mvn clean install'
 				sh 'mvn sonar:sonar'
 				 
-			    }
+			    
             }
         }
         stage('Package') {
